@@ -1,0 +1,96 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex)
+    {
+        switch (listindex)
+        {
+        case "school of sciences" :
+            document.getElementById("course").options[0]=new Option("Select course","");
+            document.getElementById("course").options[1]=new Option("BSc Mathematics","mathematics");
+            document.getElementById("course").options[2]=new Option("BSc Chemistry","chemistry");
+            document.getElementById("course").options[3]=new Option("BSc Botany","botany");
+            break;
+        case "school of arts" :
+            document.getElementById("course").options[0]=new Option("Select course","");
+            document.getElementById("course").options[1]=new Option("BA English","english");
+            document.getElementById("course").options[2]=new Option("BA Hindi","hindi");
+            break;
+        case "school of commerce" :
+            document.getElementById("course").options[0]=new Option("Select course","");
+            document.getElementById("course").options[1]=new Option("BCom CA","ca");
+            document.getElementById("course").options[2]=new Option("BBA Finance","finance");
+            break;
+        case "school of social sciences" :
+            document.getElementById("course").options[0]=new Option("Select course","");
+            document.getElementById("course").options[1]=new Option("BA History","history");
+            document.getElementById("course").options[2]=new Option("BA Economics","economics");
+            document.getElementById("course").options[3]=new Option("BA Sociology","sociology");
+            break;
+        }
+        return true;
+    }
+    </script>
+    </head>
+    <title>Dynamic Drop Down List</title>
+    <body>
+    <div class="category_div" id="category_div">Department:
+        <select id="department" name="department" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+        <option value="">Select your department</option>
+        <option value="school of sciences">School of Sciences</option>
+        <option value="school of arts">School of Arts</option>
+            <option value="school of social sciences">School of Social Sciences</option>
+            <option value="school of commerce">School of Commerce</option>
+        </select>
+    </div>
+    <div class="sub_category_div" id="sub_category_div">Course:
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="course" id="course"><option value="">Select course</option></select>')
+        </script>
+        <noscript>
+        <select id="course" name="course">
+            <option value="mathematics">BSc Mathematics</option>
+            <option value="chemistry">BSc Chemistry</option>
+            <option value="botany">BSc Botany</option>
+            <option value="english">BAEnglish</option>
+            <option value="hindi">BA Hindi</option>
+            <option value="ca">BCom CA</option>
+            <option value="finance">BBA Finance</option>
+            <option value="history">BA History</option>
+            <option value="economics">BA Economics</option>
+            <option value="sociology">BA Sociology</option>
+        </select>
+        </noscript>
+    </div>
+    </body>
+</html>
+
+<!--        <div class="formbold-mb-3">-->
+<!--        <label class="formbold-form-label">Department</label>-->
+
+<!--        <select class="formbold-form-input" name="department" id="department">-->
+<!--          <option value="male">Please select</option>-->
+<!--          <option value="female">School of Sciences</option>-->
+<!--          <option value="others">School of Commerce</option>-->
+<!--            <option value="others">School of Arts</option>-->
+<!--            <option value="others">School of Social Sciences</option>-->
+<!--        </select>-->
+<!--      </div>-->
+
+<!--        <div class="formbold-mb-3">-->
+<!--        <label class="formbold-form-label">Course</label>-->
+
+<!--        <select class="formbold-form-input" name="course" id="course">-->
+<!--          <option value="male">Please select</option>-->
+<!--          <option value="female">Mathematics</option>-->
+<!--          <option value="others">Chemistry</option>-->
+<!--            <option value="others">History</option>-->
+<!--            <option value="others">Economics</option>-->
+<!--            <option value="others">English</option>-->
+<!--            <option value="others">Hindi</option>-->
+<!--            <option value="others">BCom CA</option>-->
+<!--            <option value="others">BBA</option>-->
+<!--            <option value="others">Finance</option>-->
+<!--        </select>-->
+<!--      </div>-->
